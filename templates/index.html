@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <body>
     <header>
@@ -39,8 +39,7 @@
             <h2>Data Science Student</h2>
             <p>Passionate about SQL, Python, and Data Visualization</p>
             <div class="hero-social-links">
-                <a href="https://www.linkedin.com/in/sai-balaram-tumuluri-20448b34a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
-                " target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/sai-balaram-tumuluri-20448b34a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/SaiBalaram" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:balaramtumuluri@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
@@ -51,9 +50,7 @@
         <div class="about-content" data-aos="fade-up">
             <h2>About Me</h2>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47NKUrrM-VIMcJAtcyyxWKTObbJTE-Uz0Bw&s" alt="alternatetext">
-            <p>I am a passionate Data Science student with a strong foundation in Python, SQL, and data visualization. 
-               My journey in technology has equipped me with skills in AI/ML and data analysis, 
-               allowing me to tackle complex problems and derive meaningful insights from data.</p>
+            <p>I am a passionate Data Science student with a strong foundation in Python, SQL, and data visualization. My journey in technology has equipped me with skills in AI/ML and data analysis, allowing me to tackle complex problems and derive meaningful insights from data.</p>
         </div>
     </section>
 
@@ -107,7 +104,7 @@
                     <h3>Computer Science Teaching</h3>
                     <p>Issuer: Noble Kids E.M. High School</p>
                     <p>Date: 2023</p>
-                    <button onclick="openCertificate('path-to-csp-certificate.jpg')" class="view-certificate">View Certificate</button>
+                    <button onclick="openCertificate('{{ url_for('static', filename='img/csp_certificate.jpg') }}')" class="view-certificate">View Certificate</button>
                 </div>
             </div>
             <div class="certificate-card" data-aos="fade-up">
@@ -116,7 +113,7 @@
                     <h3>Prompt Engineering</h3>
                     <p>Issuer: PacketPrep</p>
                     <p>Date: 2024</p>
-                    <button onclick="openCertificate('path-to-prompt-engineering-cert.jpg')" class="view-certificate">View Certificate</button>
+                    <button onclick="openCertificate('{{ url_for('static', filename='img/prompt_engineering_cert.jpg') }}')" class="view-certificate">View Certificate</button>
                 </div>
             </div>
             <div class="certificate-card" data-aos="fade-up">
@@ -125,7 +122,7 @@
                     <h3>Microsoft Office Specialist</h3>
                     <p>Issuer: UGC</p>
                     <p>Date: 2022</p>
-                    <button onclick="openCertificate('path-to-ms-office-cert.jpg')" class="view-certificate">View Certificate</button>
+                    <button onclick="openCertificate('{{ url_for('static', filename='img/ms_office_cert.jpg') }}')" class="view-certificate">View Certificate</button>
                 </div>
             </div>
             <div class="certificate-card" data-aos="fade-up">
@@ -134,7 +131,7 @@
                     <h3>Applied AI</h3>
                     <p>Issuer: IBM</p>
                     <p>Date: 2024</p>
-                    <button onclick="openCertificate('path-to-ai-cert.jpg')" class="view-certificate">View Certificate</button>
+                    <button onclick="openCertificate('{{ url_for('static', filename='img/ai_cert.jpg') }}')" class="view-certificate">View Certificate</button>
                 </div>
             </div>
         </div>
@@ -142,7 +139,7 @@
         <!-- Certificate Modal -->
         <div id="certificateModal" class="modal">
             <span class="close-modal">&times;</span>
-            <img id="modalImage" class="modal-content">
+            <img id="modalImage" class="modal-content" alt="Certificate">
         </div>
     </section>
 
@@ -228,7 +225,7 @@
 
         function openCertificate(imagePath) {
             modal.style.display = "block";
-            modalImg.src = imagePath;
+            modalImg.src = imagePath;  // Set the image source for the modal
         }
 
         // Close modal when clicking the × button
